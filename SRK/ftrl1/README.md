@@ -1,4 +1,4 @@
-this code generates the submission file ftrl1sub.csv
+this code generates the submission file ftrl1sub.csv and ave2sub.csv
 
 this two codes should be placed in the folder sub10
 
