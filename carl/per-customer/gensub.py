@@ -7,11 +7,13 @@ pred={}
 name='../peruser/ave3sub.csv'
 for row in csv.DictReader(open(name)):
     pred[row['USER_ID_hash']]=row['PURCHASED_COUPONS']
-for sub in files:
+for c,sub in enumerate(files):
     s=pd.read_csv('sub/%s'%sub)
     result = s.sort_index(by='label', ascending=False)
 #    print ' '.join([str(i) for i in np.array(result[:10]['COUPON_ID_hash'])])#.head()
     pred[sub]=' '.join([str(i) for i in np.array(result[:10]['COUPON_ID_hash'])])
+    if c>310:
+        break # we could definitely improve here
 print len(files)
 f=open('sub3.csv','w')
 f.write('USER_ID_hash,PURCHASED_COUPONS\n')
