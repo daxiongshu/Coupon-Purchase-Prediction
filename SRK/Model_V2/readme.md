@@ -14,4 +14,10 @@ Also we need to get the DV for the validation sample. We will use the output fil
 
 Next part is the feature creation. We will build IDVs on four samples - dev, val, train and test. 
 Models are built on the dev sample and validated on the val sample. Models with best params are finally built again on the train sample and predicted on the test sample.
+ 1. buildIDV_dev.py - to build IDVs on the dev sample based on the past purchases present in dev
+ 2. buildIDV_val.py - to build IDVs on val sample for all the coupon-user combination of val week
+ 3. buildIDV_train.py - to build IDVs on the train sample based on past purchases
+ 4. buildIDV_test.py - to build IDVS on test sample 
+
+
 
