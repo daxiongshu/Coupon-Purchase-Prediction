@@ -17,7 +17,18 @@ Models are built on the dev sample and validated on the val sample. Models with 
  1. buildIDV_dev.py - to build IDVs on the dev sample based on the past purchases present in dev
  2. buildIDV_val.py - to build IDVs on val sample for all the coupon-user combination of val week
  3. buildIDV_train.py - to build IDVs on the train sample based on past purchases
- 4. buildIDV_test.py - to build IDVS on test sample 
+ 4. buildIDV_test.py - to build IDVs on test sample 
 
+Then comes the model building part. We need to find the best params for the model through cross validation (xgboost in this case - we could change the type of modeling algorithm). AUC is used as the measure for param tuning. The code for this is
+ * buildModel_xgb.py
+
+Once we get the good params from cross validation, we could use those params to build the final model. This code outputs the predicted probabilities for all coupon-user combinations of test week. The model code for final model is 
+ * finalModel_xgb.py
+
+Next step is to post process the output probability file to get the top 10 coupons for a given user. Code for getting this is
+ * postProcess.py
+
+A new postProcess code where some weightage is given based on the release date of the coupons is present in
+ * postProcess_v2.py
 
 
