@@ -31,4 +31,4 @@ Next step is to post process the output probability file to get the top 10 coupo
 A new postProcess code where some weightage is given based on the release date of the coupons is present in
  * postProcess_v2.py
 
-*Validation codes are present in the validation folder with a readme file inside*
+**Validation codes are present in the validation folder with a readme file inside**
