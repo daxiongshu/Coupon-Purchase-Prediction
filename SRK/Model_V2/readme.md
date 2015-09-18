@@ -10,5 +10,8 @@ Files which help to do the splitting the train data are as follows. Create a new
  3. splitCouponVisit.py
 
 Also we need to get the DV for the validation sample. We will use the output file when we need to compute the MAP@10 value of validation sample. File to produce the val DV is
- getDV_val.py
- 
+ * getDV_val.py
+
+Next part is the feature creation. We will build IDVs on four samples - dev, val, train and test. 
+Models are built on the dev sample and validated on the val sample. Models with best params are finally built again on the train sample and predicted on the test sample.
+
