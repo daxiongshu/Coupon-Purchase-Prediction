@@ -80,7 +80,7 @@ def writeDV(dv_dict, user_file, out_file):
 	out_file_handle.close()
 
 if __name__ == "__main__":
-	model_data_path = "../../Data/Model1/"
+	model_data_path = "../../Data/Model2/"
 	full_data_path = "../../Data/"
 
 	# file_names #
