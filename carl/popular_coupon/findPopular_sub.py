@@ -33,5 +33,5 @@ if __name__ == "__main__":
         result=couponcount.sort_index(by='count',ascending=False)
         print result[:10]
         result=result[:10]
-        pickle.dump(np.array(result['coupon']),open('popular.p','w'))
+        pickle.dump(np.array(result['coupon']),open('popular_sub.p','w'))
         
