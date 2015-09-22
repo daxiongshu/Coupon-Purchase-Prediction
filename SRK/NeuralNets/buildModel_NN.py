@@ -38,7 +38,7 @@ def runNN(train_X, train_y, test_X, test_y=None):
         #sgd_opt = SGD(lr=0.01)
         model.compile(loss='binary_crossentropy', optimizer='adam')
 
-        model.fit(train_X, train_y, batch_size=64, nb_epoch=30, validation_split=0.05, verbose=2)
+        model.fit(train_X, train_y, batch_size=256, nb_epoch=50, validation_split=0.05, verbose=2)
         preds = model.predict(test_X, verbose=0)[:,1]
 	print preds[:10]
 	print "Test preds shape : ",preds.shape
